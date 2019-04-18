@@ -1,0 +1,29 @@
+{
+  "name": "node-js-playlist",
+  "version": "1.0.0",
+  "description": "node js playlist",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devangnpatil/node-js-playlist.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "playlist"
+  ],
+  "author": "devang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devangnpatil/node-js-playlist/issues"
+  },
+  "homepage": "https://github.com/devangnpatil/node-js-playlist#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
