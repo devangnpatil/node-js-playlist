@@ -1,7 +1,24 @@
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
-var data = [
-];
+// Connect mongodb
+mongoose.connect('mongodb+srv://devangnpatil:devangnpatil@cluster0-ucesq.mongodb.net/test?retryWrites=true')
+
+// Create a blue prints
+var todoSchema = new mongoose.Schema({
+    item: String,
+    id: Number
+});
+
+var Todo = mongoose.model('Todo', todoSchema );
+
+// var itemOne = Todo({item:'Driver', id:999}).save(function(err){
+//     if(err){
+//         throw err;
+//     }else{
+//         console.log('Item saved');
+//     }
+// })
 
 var urlencoderParser = bodyParser.urlencoded({extended:false});
 
