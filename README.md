@@ -14,9 +14,10 @@
 - body-parser
 - ejs
 
+## Command:
 
-## command
+1. To install npm 
+`npm install`
 
-Run 
-# npm install
-# nodeman app
+2. To run nodeman
+`nodeman app`
