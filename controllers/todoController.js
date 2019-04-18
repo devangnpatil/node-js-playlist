@@ -25,19 +25,31 @@ var urlencoderParser = bodyParser.urlencoded({extended:false});
 module.exports = function(app){
 
 app.get('/todo', function(req, res){
-    res.render('todo', {todos: data});
+    // get data from mongo db and pass it to View
+    Todo.find({}, function(err, data){
+        if(err) throw err
+        res.render('todo', {todos: data});
+    });
 });
 
 app.post('/todo', urlencoderParser, function(req, res){
-    data.push(req.body);
-    res.json(data);
+    // get data from view and pass it to db
+    var newToo = Todo(req.body).save(function(err, data){
+        if(err) throw err
+        res.json(data);
+    });
 });
 
 app.delete('/todo/:id', function(req, res){
-    data = data.filter(function(todo){
-        return todo.id !== req.params.id;
-    })
-    res.json(data);
+    // Delete requested id from mongo db;
+    Todo.find({id:req.params.id}).remove(function(err, data){
+        if(err) throw err
+        res.json(data)
+    });
+    // data = data.filter(function(todo){
+    //     return todo.id !== req.params.id;
+    // })
+    // res.json(data);
 });
 
 };
