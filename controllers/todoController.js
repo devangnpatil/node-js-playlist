@@ -57,6 +57,8 @@ app.get('/todo', function(req, res){
     });
 });
 
+
+
 app.post('/todo', urlencoderParser, function(req, res){
     // get data from view and pass it to db
     var newToo = Todo(req.body).save(function(err, data){

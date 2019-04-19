@@ -12,6 +12,11 @@ app.use(express.static('./public'));
 // fire controller
 todoController(app);
 
+// redirect the home route to /todo
+app.get('/', (req, res) => {
+    res.redirect('/todo')
+})
+
 // listen to port
 app.listen(3000);
 
