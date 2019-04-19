@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
 })
 
 // listen to port
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 
-console.log('post 3000');
+console.log(`Server started : http://localhost:${process.env.PORT || 5000}`);
