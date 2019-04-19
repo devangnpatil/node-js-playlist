@@ -21,6 +21,14 @@ const MongoClient = require('mongodb').MongoClient;
 // Connect mongodb
 mongoose.connect('mongodb+srv://devangnpatil:devangnpatil@cluster0-ucesq.mongodb.net/test?retryWrites=true')
 
+var db = mongoose.connection;
+ 
+db.on('error', console.error.bind(console, 'connection error:'));
+ 
+db.once('open', function() {
+  console.log("Connection Successful!");
+});
+
 // Create a blue prints
 var todoSchema = new mongoose.Schema({
     item: String,
