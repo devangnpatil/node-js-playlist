@@ -1,5 +1,22 @@
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://devangnpatil:devangnpatil@cluster0-ucesq.mongodb.net/test?retryWrites=true";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+
+//     var todoSchema = new mongoose.Schema({
+//         item: String,
+//         id: Number
+//     });
+
+//     var Todo = mongoose.model('Todo', todoSchema ); 
+    
+//     client.close();
+// });
+
 
 // Connect mongodb
 mongoose.connect('mongodb+srv://devangnpatil:devangnpatil@cluster0-ucesq.mongodb.net/test?retryWrites=true')
