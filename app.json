@@ -1,0 +1,8 @@
+{
+    "name": "Todo playlist using node.js",
+    "description": "Todo playlist Node js",
+    "repository": "https://github.com/devangnpatil/node-js-playlist.git",
+    "logo": "",
+    "keywords": ["node"],
+    "image": "heroku/svg"
+}
